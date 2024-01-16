@@ -1,0 +1,103 @@
+@use "sass:map";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+  "gray":       #EFEFEF,
+  "primary":    #4545A5,
+  "secondary":  #6C757D,
+  "success":    #28A745,
+  "info":       #17A2B8,
+  "warning":    #FFC107,
+  "danger":     #DC3545,
+  "light":      #FBFBFB,
+  "dark":       #343A40,
+);
+
+$theme-colors: map.merge($theme-colors, $custom-theme-colors);
+
+$custom-grid-breakpoints: (
+    "xxl": 1600px
+);
+$grid-breakpoints: map.merge($grid-breakpoints, $custom-grid-breakpoints);
+
+$custom-max-widths: (
+    "xxl": 1540px
+);
+$container-max-widths: map.merge($container-max-widths, $custom-max-widths);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@mixin image($name) {
+    background-image: url("../images/icons/#{$name}");
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin hide-scrollbar() {
+    & {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}  
+
+
+$enable-shadows: true;
+
+.container-xxl {
+    border-color: map.get($theme-colors, "gray");
+}  
+
+.left-side {
+    border-right: 1px solid map.get($theme-colors, "gray");
+}
+
+.logo {
+    @include image("logo.svg");
+    display: block;
+    width: 25px;
+    height: 41px;
+    filter: invert(2);
+}
+
+.people {
+    @include image("people.svg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: 3.13px;
+    filter: invert(2);
+}
+
+.chat {
+    @include image("chat.svg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: 3.13px;
+    filter: invert(2);
+}
+
+.person {
+    @include image("person.svg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: 3.13px;
+    filter: invert(2);
+}
+
+.search {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid map.get($theme-colors, "gray");
+    border-left: 0;
+}

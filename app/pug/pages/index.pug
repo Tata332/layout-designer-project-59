@@ -1,0 +1,31 @@
+doctype html
+html.h-100(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='icon' type='image/x-icon' href='favicon.ico')
+
+    title
+
+    link(rel='stylesheet' href='./styles/app.css')
+
+  body.p-md-4.h-100
+    div.container-xxl.overflow-hidden.rounded-4
+      div.row.h-100
+        div.left-side.col-xxl-4.col-sm-12.col-md-4.p-0
+          header.bg-primary.p-4.d-flex.justify-content-between
+            div.logo
+            div.d-flex.column-gap-4.justify-content-end
+              div.d-flex.align-items-center.column-gap-2
+                div.people
+                h5.m-0.h6.text-light Контакты
+              div.d-flex.align-items-center.column-gap-2
+                div.chat
+                h5.m-0.h6.text-light Сообщения
+              div.d-flex.align-items-center.column-gap-2
+                div.person
+                h5.m-0.h6.text-light Профиль
+          
+          div.contacts.px-4.pt-5
+            include ../includes/contacts.pug
+        div.col-8
