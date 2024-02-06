@@ -58,41 +58,26 @@ $enable-shadows: true;
 
 .left-side {
     border-right: 1px solid map.get($theme-colors, "gray");
-}
 
-.logo {
-    @include image("logo.svg");
-    display: block;
-    width: 25px;
-    height: 41px;
-    filter: invert(2);
-}
+    header{
+        .hexlet-logo {
+            width: 14px;
+            filter: invert(1);
+        }
+    }
+    
+    a.logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 40px;
+    }
 
-.people {
-    @include image("people.svg");
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-top: 3.13px;
-    filter: invert(2);
-}
-
-.chat {
-    @include image("chat.svg");
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-top: 3.13px;
-    filter: invert(2);
-}
-
-.person {
-    @include image("person.svg");
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-top: 3.13px;
-    filter: invert(2);
+    .tab-logo {
+        width: 25px;
+        filter: invert(2);
+    }
 }
 
 .search {

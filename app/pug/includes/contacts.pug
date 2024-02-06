@@ -3,56 +3,56 @@
     "A": [{
       name: "Алексей Примадонин",
       status: "Онлайн",
-      avatar: "/images/avatar_3.jpg"
+      avatar: "./images/avatar_3.jpg"
     }],
 
     "В": [{
       name: "Вениамин Редакторович",
       status: "Онлайн",
-      avatar: "/images/avatar_4.jpg"
+      avatar: "./images/avatar_4.jpg"
     }],
 
     "Д": [{
       name: "Джедай Падаванов",
       status: "Был онлайн вчера",
-      avatar: "/images/avatar_2.jpg"
+      avatar: "./images/avatar_2.jpg"
     }],
 
     "К": [{
       name: "Кодовёнок Хекслетович",
       status: "Был онлайн 3 часа назад",
-      avatar: "/images/avatar_1.jpg"
+      avatar: "./images/avatar_1.jpg"
     },
     {
       name: "Королева Верстальщина",
       status: "Была онлайн вчера",
-      avatar: "/images/avatar_5.jpg"
+      avatar: "./images/avatar_5.jpg"
     }],
 
     "П": [{
       name: "Питонист Джангович",
       status: "Был онлайн вчера",
-      avatar: "/images/avatar_6.jpg"
+      avatar: "./images/avatar_6.jpg"
     }],
   }
 
 mixin avatar(url, size = "50px")
   img.rounded-circle.ms-3.me-4(src= url, alt="avatar" width= size height= size)
 
-mixin search
-  form(action="#") 
-    input.shadow-none.search.form-control.p-4(type="text" placeholder="Поиск по контактам")
+mixin contact(contacti)
+  a.contact.d-flex.align-items-center.text-decoration-none.mb-3.shadow(href="#")
+    +avatar(contacti.avatar)
+    .py-4
+        p.text-dark.fw-bold.mb-0= contacti.name
+        p.text-secondary.small.mb-0= contacti.status
 
-mixin contact(contactInfo)
-  a.d-flex.align-items-center(href"#")
-    +avatar(contactInfo.avatar)
-    .py-5
-      p.text-dark.fw-bold=contactInfo.name
-      p.text-secondary.smail=contactInfo.status
+mixin search
+  form.mb-5(role="search" action="#" method="post")
+    input.shadow-none.search.form-control.p-4(type="search" placeholder="Поиск по контактам")
 
 h2.fw-bold.mb-4.text-dark Контакты
 +search("Поиск по контактам")
-each contactInfos, alphabet in contacts
-  p.mb-3.mt-5= alphabet
-  each contactInfo in contactInfos
-    +contact(contactInfo)
+each contactis, letter in contacts
+  p.mb-3.mt-5.text-muted= letter
+  each contacti in contactis
+    +contact(contacti)
