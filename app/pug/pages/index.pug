@@ -3,7 +3,6 @@ html.h-100(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='icon' type='image/x-icon' href='favicon.ico')
 
     title
 
@@ -14,6 +13,17 @@ html.h-100(lang='ru')
       div.row.h-100
         div.left-side.col-xxl-4.col-sm-12.col-md-4.p-0.h-100
           include ../includes/header.pug
-          div.contacts.px-4.pt-5
-            include ../includes/contacts.pug
-        div.col-8
+          div.tab-content
+            div.px-4.pt-5.fade.tab-pane.show.active(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
+              include ../includes/contacts.pug
+            div.px-4.pt-5.fade.tab-pane(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
+              include ../includes/message.pug
+            div.px-4.pt-5.fade.tab-pane(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
+              include ../includes/profile.pug
+        div.right.col.d-md-flex.flex-column
+          div.text-center.m-auto
+            img.rounded-circle.ms-3.me-4(src="images/avatar_1.jpg", alt="avatar" width="200px" height="200px")
+            p.fw-bold.text-dark.mb-0.mt-3 Привет, Кодовёнок
+            p.small.mb-0 Выбери чат, чтобы начать общаться
+
+script(src="js/bootstrap.min.js")

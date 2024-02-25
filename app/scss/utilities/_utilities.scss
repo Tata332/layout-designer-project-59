@@ -1,0 +1,82 @@
+.radius-left-top {
+    border-top-left-radius: 1rem;
+}
+
+.radius-left {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.radius-right {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.radius {
+    border-radius: 1rem;
+}
+
+$utilities: map.merge($utilities,
+    ("border": 
+        (
+            property: border,
+            class: border,
+            responsive: true,
+            values: (
+                null: 1px solid #efefef,
+            )
+        )
+    )
+);
+
+$utilities: map.merge($utilities,
+    ("border-bottom": 
+        (
+            property: border-bottom,
+            class: border-bottom,
+            responsive: true,
+            values: (
+                null: 1px solid #efefef,
+            )
+        )
+    )
+);
+
+$utilities: map.merge($utilities,
+    ("border-top": 
+        (
+            property: border-top,
+            class: border-top,
+            responsive: true,
+            values: (
+                null: 1px solid #efefef,
+            )
+        )
+    )
+);
+
+$utilities: map.merge($utilities,
+    ("border-left": 
+        (
+            property: border-left,
+            class: border-left,
+            responsive: true,
+            values: (
+                null: 1px solid #efefef,
+            )
+        )
+    )
+);
+
+$utilities: map.merge($utilities,
+    ("border-right": 
+        (
+            property: border-right,
+            class: border-right,
+            responsive: true,
+            values: (
+                null: 1px solid #efefef,
+            )
+        )
+    )
+);
