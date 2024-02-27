@@ -17,19 +17,6 @@
 }
 
 $utilities: map.merge($utilities,
-    ("border": 
-        (
-            property: border,
-            class: border,
-            responsive: true,
-            values: (
-                null: 1px solid #efefef,
-            )
-        )
-    )
-);
-
-$utilities: map.merge($utilities,
     ("border-bottom": 
         (
             property: border-bottom,

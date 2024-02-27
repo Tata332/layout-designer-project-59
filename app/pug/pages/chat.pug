@@ -1,0 +1,61 @@
+-
+  const message = [
+    {
+      name: "Вениамин Редакторович",
+      text: "Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?",
+      time: "8 минут назад",
+      avatar: "images/avatar_4.jpg",
+    },
+
+    {
+      name: "Вениамин Редакторович",
+      text: "Лады",
+      time: "5 минут назад",
+      avatar: "images/avatar_4.jpg",
+    },
+
+    {
+      name: "Вениамин Редакторович",
+      text: "о_О",
+      time: "Только что",
+      avatar: "images/avatar_4.jpg",
+    },
+
+    {
+      text: "Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень",
+      time: "8 минут назад",
+      avatar: "images/avatar_1.jpg",
+    },
+
+    {
+      text: "А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие",
+      time: "3 минут назад",
+      avatar: "images/avatar_1.jpg",
+    },
+  ]
+
+mixin avatar(url, size = "50px")
+  img.rounded-circle.ms-3.me-4(src= url, alt="avatar" width= size height= size)
+
+doctype html
+html.h-100(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        link(rel='stylesheet' href='./styles/app.css')
+    body.p-md-4.h-100
+        div.container-xxl.overflow-hidden.rounded-4
+            div.row.h-100
+                div.left-side.col-xxl-4.col-sm-12.col-md-4.p-0.h-100
+                    include ../includes/header.pug
+                    div.tab-content
+                        div.px-4.pt-5.fade.tab-pane.show.active(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
+                            include ../includes/contacts.pug
+                        div.px-4.pt-5.fade.tab-pane(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
+                            include ../includes/message.pug
+                        div.px-4.pt-5.fade.tab-pane(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
+                            include ../includes/profile.pug
+                div.col.d-flex.flex-column
+                    include ../includes/chat.pug
+script(src="js/bootstrap.min.js")
