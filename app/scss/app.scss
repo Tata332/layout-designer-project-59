@@ -97,3 +97,7 @@ $enable-shadows: true;
     border-bottom: 1px solid map.get($theme-colors, "gray");
     border-left: 0;
 }
+
+.chat-feed {
+    @include hide-scrollbar;
+  }
