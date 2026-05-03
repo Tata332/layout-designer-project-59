@@ -16,5 +16,21 @@
   "bugs": {
     "url": "https://github.com/Tata332/layout-designer-project-59/issues"
   },
-  "homepage": "https://github.com/Tata332/layout-designer-project-59#readme"
+  "homepage": "https://github.com/Tata332/layout-designer-project-59#readme",
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "gulp": "^5.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-svg-sprite": "^2.0.3",
+    "htmlhint": "^1.9.2",
+    "sass": "^1.99.0",
+    "stylelint": "^17.9.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8.1.1",
+    "stylelint-scss": "^7.0.0"
+  }
 }
